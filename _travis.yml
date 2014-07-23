@@ -1,0 +1,3 @@
+language: jruby
+rvm:
+  - 1.7.10
