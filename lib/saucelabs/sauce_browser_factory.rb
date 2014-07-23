@@ -1,6 +1,6 @@
 require_relative 'parsed_values'
 
-module SauceModule
+module SauceLabs
   class SauceBrowserFactory
     include ParsedValues
 

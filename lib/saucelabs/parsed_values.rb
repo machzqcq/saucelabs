@@ -1,4 +1,4 @@
-module SauceModule
+module SauceLabs
   module ParsedValues
 
     def extract_values_from(browser_string)
