@@ -5,7 +5,7 @@ require 'saucelabs/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "saucelabs"
-  spec.version       = saucelabs::VERSION
+  spec.version       = "0.1"
   spec.authors       = ["Pradeep K. Macharla"]
   spec.email         = ["pradeep@seleniumframework.com"]
   spec.summary       = %q{Access saucelabs using simple ruby.}
