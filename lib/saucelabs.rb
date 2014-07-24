@@ -4,10 +4,6 @@ require 'saucelabs/parsed_values'
 module SauceLabs
   attr_accessor :factory
 
-  def self.sauce_factory
-      factory.browser
-  end
-
   def self.browser(browser = :chrome, browser_options={})
     SauceBrowserFactory.new(browser,browser_options)
   end
