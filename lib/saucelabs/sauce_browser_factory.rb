@@ -4,6 +4,21 @@ module SauceLabs
   class SauceBrowserFactory
     include ParsedValues
 
+    attr_accessor :url,:browser_options
+
+    def browser(browser,browser_options)
+      target,options = browser_caps(browser,browser_options)
+      create_browser(target,options)
+    end
+
+    def create_browser(target,options)
+      if options.empty?
+        Selenium::WebDriver.for target
+      else
+        Selenium::WebDriver.for target,options
+      end
+    end
+
     def capabilities(browser, version, platform)
       capabilities = Selenium::WebDriver::Remote::Capabilities.send browser
       capabilities.version = version unless version.nil?
@@ -15,6 +30,21 @@ module SauceLabs
       client = Selenium::WebDriver::Remote::Http::Default.new
       client.timeout = 180
       client
+    end
+
+    def browser_caps(browser,browser_options)
+      browser = ENV['browser'].to_sym if ENV['browser']
+      browser,version,platform = extract_values_from(browser)
+      options = {}
+      options.merge! browser_options
+      caps = capabilities(browser,version,platform)
+      options[:url] = url
+      if options.include? :url
+        target = :remote
+        options[:desired_capabilities] = caps
+      end
+      options[:http_client] = '' unless http_client
+      return target,options
     end
 
   end
