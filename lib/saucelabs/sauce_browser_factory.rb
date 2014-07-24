@@ -6,12 +6,25 @@ module SauceLabs
 
     attr_accessor :url,:browser_options
 
-    def browser(browser,browser_options)
+    def watir_browser(browser,browser_options)
       target,options = browser_caps(browser,browser_options)
-      create_browser(target,options)
+      create_watir_browser(target,options)
     end
 
-    def create_browser(target,options)
+    def selenium_browser(browser,browser_options)
+      target,options = browser_caps(browser,browser_options)
+      create_selenium_browser(target,options)
+    end
+
+    def create_watir_browser(target,options)
+      if options.empty?
+        Watir::Browser.new target
+      else
+        Watir::Browser.new target,options
+      end
+    end
+
+    def create_selenium_browser(target,options)
       if options.empty?
         Selenium::WebDriver.for target
       else
