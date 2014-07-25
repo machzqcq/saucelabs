@@ -11,13 +11,13 @@ module SauceLabs
     private
 
     def extract_browser(value)
-      browser = value.split(/\d*/)[0]
-      browser = browser.split('|')[0] if browser.include? '|'
+      browser = value.to_s.split(/\d+/)[0]
+      browser = browser.to_s.split('|')[0] if browser.to_s.include? '|'
       browser
     end
 
     def extract_version(value)
-      value = value.split('|') if value.include? '|'
+      value = value.to_s.split('|') if value.to_s.include? '|'
       regexp_to_match = /\d{1,}/
       if (not regexp_to_match.match(value).nil?)
         version = regexp_to_match.match(value)[0]
@@ -28,7 +28,7 @@ module SauceLabs
     end
 
     def extract_platform(value)
-      platform = value.split('|')[1]
+      platform = value.to_s.split('|')[1]
       platform
     end
 
