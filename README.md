@@ -4,7 +4,11 @@ saucelabs gem is written in simple ruby so as to be able to set the desired capa
 and also be able to dynamically set the browser choice through an environment variable and execute the same scripts across browsers.
 Also platform and device parameters in the desired capabilities object when creating a connection to
 Sauce Labs. It can also be used to create a connection to local browser instance in addition to Sauce Labs
-The gem has been tested on MRI ruby and JRuby. Please report any issues and I will try my best to fix asap.
+The gem has been tested on MRI ruby and JRuby. Please report any issues and I will try my best to fix asap.  
+
+##Pre-Requistes  
+If you are planning to use a Selenium GRID or connect to Sauce Labs, it is assumed that you have an understanding  
+on the Selenium GRID connection parameters. Sauce Labs works as a large Selenium GRID with username and password auth.
 
 ## Background
 
