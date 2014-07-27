@@ -3,15 +3,39 @@ require 'selenium-webdriver'
 require 'watir-webdriver'
 
 module SauceLabs
+  #
+  # This class has the code necessary to create an instance of browser after making a connection to saucelabs.
+  # This class can also be used to create browser instance for local connections
+  #
   class SauceBrowserFactory
     include ParsedValues
 
     attr_accessor :url,:options,:persistent_http
 
+    #
+    # Creates a watir browser session and returns the browser object
+    #
+    # @example
+    # SauceLabs.watir_browser(browser = :chrome, browser_options = {})
+    # @param  [String] the browser string passed into the method
+    # @param [Hash] the optional hash to specify browser options
+    # @return [Object] browser session
+    #
+
     def watir_browser(browser,browser_options)
       target,options = browser_caps(browser,browser_options)
       create_watir_browser(target,options)
     end
+
+    #
+    # Creates a Selenium driver session and returns the driver object
+    #
+    # @example
+    # SauceLabs.selenium_driver(browser = :chrome, browser_options = {})
+    # @param  [String] the browser string passed into the method
+    # @param [Hash] the optional hash to specify browser options
+    # @return [Object] browser session
+    #
 
     def selenium_driver(browser,browser_options)
       target,options = browser_caps(browser,browser_options)
@@ -36,6 +60,14 @@ module SauceLabs
       end
     end
 
+    #
+    # Returns the target and options including the capabilities
+    #
+    # @param  [String] the browser string passed into the method
+    # @param [Hash] the optional hash to specify browser options
+    # @return [Symbol,Hash] browser as symbol and options as Hash
+    #
+
     def browser_caps(browser,browser_options)
       target = (browser.to_sym if ENV['BROWSER'].nil? or ENV['browser'].empty?) || (ENV['BROWSER'].to_sym)
       browser,version,platform,device = extract_values_from(target)
@@ -59,6 +91,12 @@ module SauceLabs
       capabilities.device = device unless device.nil? or device.empty?
       capabilities
     end
+
+    #
+    # Returns a persistent http connection object
+    #
+    # @return [Object] Persistent http connection object
+    #
 
     def http_client
      client = Selenium::WebDriver::Remote::Http::Persistent.new
