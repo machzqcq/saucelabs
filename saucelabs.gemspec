@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'watir-webdriver', '>= 0.6.9'
+  spec.add_dependency 'selenium-webdriver'
   spec.add_dependency 'net-http-persistent'
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
