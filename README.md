@@ -77,12 +77,12 @@ The platform values can also be obtained from https://saucelabs.com/platforms
 
 ### Setting parameters using a block
 
-We can also set parameters like url, http_persistent and browser options too. Below are some examples:
+We can also set parameters like sauce url, http_persistent and browser options. Below are some examples:
 
 
 ````ruby
 SauceLabs.conf do | conf|
-  conf.url = 'http://username:password@ip:port/wd/hub'
+  conf.url = 'http://username:password@ip:port/wd/hub' #Saucelabs connection url
   conf.persistent_http = true
   conf.browser_options = { :switches => %w[--disable-extensions],:chromeOptions => {"args" => ["test-type" ]}}
 end
