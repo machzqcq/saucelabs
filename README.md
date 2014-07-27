@@ -88,6 +88,9 @@ SauceLabs.conf do | conf|
 end
 ````
 
+## Documentation
+
+You can view the RDocs for this project [here] (https://github.com/machzqcq/saucelabs).
 
 ## Installation
 
