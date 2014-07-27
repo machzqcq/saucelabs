@@ -1,6 +1,7 @@
 # SauceLabs
 
-saucelabs gem is written in simple ruby so as to be able to specify the desired capabilities.
+saucelabs gem is written in simple ruby so as to be able to set the desired capabilities for selenium/watir grid execution
+and also be able to dynamically set the browser choice through an environment variable and execute the same scripts across browsers.
 Also platform and device parameters in the desired capabilities object when creating a connection to
 Sauce Labs. It can also be used to create a connection to local browser instance in addition to Sauce Labs
 The gem has been tested on MRI ruby and JRuby. Please report any issues and I will try my best to fix asap.
