@@ -1,7 +1,7 @@
 # SauceLabs
 
-saucelabs gem is written in simple ruby so as to be able to specify the desired capabilities
-platform and device parameters in the desired capabilities object when creating a connection to
+saucelabs gem is written in simple ruby so as to be able to specify the desired capabilities.
+Also platform and device parameters in the desired capabilities object when creating a connection to
 Sauce Labs. It can also be used to create a connection to local browser instance in addition to Sauce Labs
 
 ## Background
