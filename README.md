@@ -74,6 +74,13 @@ The following table is a mapping of all the platforms available on Sauce Labs we
 
 The platform values can also be obtained from https://saucelabs.com/platforms
 
+The following table is a mapping of all the devices available on Sauce Labs website
+
+| device | description |
+| --- | --- |
+| iphone | iPhone |
+| android | Android |
+
 
 ### Setting parameters using a block
 
