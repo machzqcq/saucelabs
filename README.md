@@ -13,8 +13,10 @@ that gets set in the desired capabilities object. The gem creation got inspired 
 http://seleniumframework.wordpress.com/2014/05/18/pattern-for-running-multiple-cucumber-projects-on-ci-server/
 
 ````ruby
+require 'saucelabs'
 SauceLabs.watir_browser(browser = :firefox, browser_options = {})
 # or
+require 'saucelabs'
 SauceLabs.selenium_driver(browser = :firefox, browser_options = {})
 ````
 The methods use firefox as default browser and browser_options as optional parameter. You can specify other browsers
@@ -45,6 +47,18 @@ Yet Another example of being able to use safari on mac platform and iphone devic
 SauceLabs.watir_browser(browser = :'chrome|linux|iphone', browser_options = {})
 # or
 SauceLabs.selenium_driver(browser = :'chrome|linux|iphone', browser_options = {})
+````
+
+A simple ruby code example:
+
+````ruby
+require 'saucelabs'
+include SauceLabs
+
+ENV['BROWSER'] = "chrome"
+@browser = SauceLabs.watir_browser
+@browser.goto "http://www.google.com"
+@browser.quit
 ````
 
 
@@ -89,6 +103,7 @@ chrome_android: BROWSER=chrome|linux|android --format pretty --color
 The first part determines the browser and its version
 The second part determines the platform value that is set in capabilities object
 The third part (used only for mobile device testing) determines the device
+
 
 
 The following table is a mapping of all the platforms available on Sauce Labs website
@@ -140,6 +155,10 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
+
+Require the module:
+
+require 'saucelabs'
 
 Or install it yourself as:
 
