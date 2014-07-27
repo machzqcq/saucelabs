@@ -24,7 +24,7 @@ SauceLabs.watir_browser(browser = :chrome, browser_options = {})
 SauceLabs.selenium_driver(browser = :chrome, browser_options = {})
 ````
 
-Another example of being able to use chrome 35 on Windows8 platform
+Another example of being able to use chrome 35 on Windows8 platform (The :url needs to be set using SauceLabs.conf, see below)
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {})
 # or
@@ -32,14 +32,14 @@ SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {})
 ````
 
 
-Yet Another example of being able to use chrome on mac platform and Android device
+Yet Another example of being able to use chrome on mac platform and Android device (The :url needs to be set using SauceLabs.conf, see below)
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome|linux|android', browser_options = {})
 # or
 SauceLabs.selenium_driver(browser = :'chrome|linux|android', browser_options = {})
 ````
 
-Yet Another example of being able to use safari on mac platform and iphone device
+Yet Another example of being able to use safari on mac platform and iphone device (The :url needs to be set using SauceLabs.conf, see below)
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome|linux|iphone', browser_options = {})
 # or
