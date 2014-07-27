@@ -7,8 +7,7 @@ Sauce Labs. It can also be used to create a connection to local browser instance
 The gem has been tested on MRI ruby and JRuby. Please report any issues and I will try my best to fix asap.  
 
 ##Pre-Requistes  
-If you are planning to use a Selenium GRID or connect to Sauce Labs, it is assumed that you have an understanding  
-on the Selenium GRID connection parameters. Sauce Labs works as a large Selenium GRID with username and password auth.
+If you are planning to use a Selenium GRID or connect to Sauce Labs, it is assumed that you have an understanding on the Selenium GRID connection parameters. Sauce Labs works as a large Selenium GRID with username and password auth.
 
 ## Background
 
