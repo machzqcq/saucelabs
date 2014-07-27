@@ -75,6 +75,16 @@ safari|linux|iphone
 chrome|linux|android
 ````
 
+Hence the following also applies:
+
+````yml
+default: BROWSER=chrome36|win81 --format pretty --color
+safari_mac: BROWSER=safari|linux|iphone --format pretty --color
+chrome_android: BROWSER=chrome|linux|android --format pretty --color
+````
+
+
+
 The first part determines the browser and its version
 The second part determines the platform value that is set in capabilities object
 The third part (used only for mobile device testing) determines the device
