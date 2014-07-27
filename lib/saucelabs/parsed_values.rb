@@ -6,7 +6,10 @@ module SauceLabs
     #
     # @example
     #   extract_values_from(:'safari5|linux|iphone') will extract
-    # browser = safari, version=5, platform=Linux, device=iPhone
+    # browser = safari
+    # version=5
+    # platform=Linux
+    # device=iPhone
     #
     # @param  [String] the browser string passed into the method
     # @return [String,String,String,String] browser, version, platform and device
