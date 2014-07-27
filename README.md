@@ -27,7 +27,14 @@ SauceLabs.watir_browser(browser = :chrome, browser_options = {})
 SauceLabs.selenium_driver(browser = :chrome, browser_options = {})
 ````
 
-Another example of being able to use chrome 35 on Windows8 platform (The :url needs to be set using SauceLabs.conf, see below)
+Another example of being able to use chrome 35 on Windows8 platform
+````ruby
+SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {:url => 'http://username:password@ip:port/wd/hub'})
+# or
+SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {:url => 'http://username:password@ip:port/wd/hub'})
+````
+
+Another example of being able to use chrome 35 on Windows8 platform (The :url can also be set using SauceLabs.conf, see below)
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {})
 # or
