@@ -25,7 +25,7 @@ module SauceLabs
     # Extracts browser from browser string
     #
     # @example
-    #   extract_values_from(:'safari5|linux|iphone') will extract
+    #   extract_browser(:'safari5|linux|iphone') will extract
     # browser = safari
     #
     # @param  [String] the browser string passed into the method
@@ -41,7 +41,7 @@ module SauceLabs
     # Extracts version from browser string
     #
     # @example
-    #   extract_values_from(:'safari5|linux|iphone') will extract
+    #   extract_version(:'safari5|linux|iphone') will extract
     # browser = safari
     #
     # @param  [String] the browser string passed into the method
@@ -62,7 +62,7 @@ module SauceLabs
     # Extracts platform from browser string
     #
     # @example
-    #   extract_values_from(:'safari5|linux|iphone') will extract
+    #   extract_platform(:'safari5|linux|iphone') will extract
     # browser = safari
     #
     # @param  [String] the browser string passed into the method
@@ -78,7 +78,7 @@ module SauceLabs
     # Extracts device from browser string
     #
     # @example
-    #   extract_values_from(:'safari5|linux|iphone') will extract
+    #   extract_device(:'safari5|linux|iphone') will extract
     # browser = safari
     #
     # @param  [String] the browser string passed into the method
