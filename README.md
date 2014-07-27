@@ -158,7 +158,7 @@ And then execute:
 
 Require the module:
 
-require 'saucelabs'
+    require 'saucelabs'
 
 Or install it yourself as:
 
