@@ -83,7 +83,7 @@ We can also set parameters like url, http_persistent and browser options too. Be
 SauceLabs.conf do | conf|
   conf.url = 'http://username:password@ip:port/wd/hub'
   conf.persistent_http = true
-  conf.browser_options = { :switches => %w[--disable-extensions]}
+  conf.browser_options = { :switches => %w[--disable-extensions],:chromeOptions => {"args" => ["test-type" ]}}
 end
 ````
 
