@@ -90,7 +90,7 @@ end
 
 ## Documentation
 
-You can view the RDocs for this project [here] (https://github.com/machzqcq/saucelabs).
+You can view the RDocs for this project [here] (http://rubydoc.info/github/machzqcq/saucelabs/master/frames).
 
 ## Installation
 
