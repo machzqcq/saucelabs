@@ -56,7 +56,7 @@ SauceLabs.watir_browser(browser = :'chrome|linux|iphone', browser_options = {})
 SauceLabs.selenium_driver(browser = :'chrome|linux|iphone', browser_options = {})
 ````
 
-A simple ruby code example with watir:
+A simple ruby code example with watir and executing locally:
 
 ````ruby
 require 'saucelabs'
@@ -68,7 +68,7 @@ ENV['BROWSER'] = "chrome"
 @browser.quit
 ````
 
-A simple ruby code example with selenium:
+A simple ruby code example with selenium and executing locally:
 
 ````ruby
 require 'saucelabs'
@@ -77,6 +77,17 @@ include SauceLabs
 ENV['BROWSER'] = "chrome"
 @browser = SauceLabs.selenium_driver
 @browser.navigate.to "http://www.google.com"
+@browser.quit
+````
+
+A simple ruby code example with watir and execues against saucelabs:
+
+````ruby
+require 'saucelabs'
+include SauceLabs
+
+@browser = SauceLabs.watir_browser(:'chrome35|windows8', {:url => 'http://username:password@ip:port/wd/hub'})
+@browser.goto "http://www.google.com"
 @browser.quit
 ````
 
