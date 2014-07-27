@@ -44,7 +44,7 @@ Execution from command line is simple too:
 cucumber BROWSER=chrome features
 ````
 
-The string pattern that is followed by this gem is as follows (Observer the '|' delimiter:
+The string pattern that is followed by this gem is as follows (Observer the '|' delimiter):
 
 
 ````
