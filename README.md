@@ -14,6 +14,7 @@ If you are planning to use a Selenium GRID or connect to Sauce Labs, it is assum
 saucelabs gem is intended to be able to extract 4 main parameters viz. browser, version, platform and device
 that gets set in the desired capabilities object. The gem creation got inspired by the below blog post
 http://seleniumframework.wordpress.com/2014/05/18/pattern-for-running-multiple-cucumber-projects-on-ci-server/
+Though the gem name is saucelabs , it can be used to create browser instances locally and against any selenium grid. 
 
 ## Local Execution
 
