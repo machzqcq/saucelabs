@@ -107,6 +107,12 @@ module SauceLabs
       @sauce_platforms["windows81"] = "Windows 8.1"
       @sauce_platforms["windows8"] = "Windows 8"
       @sauce_platforms["windows7"] = "Windows 7"
+      @sauce_platforms["any"] = "ANY"
+      @sauce_platforms["mac"] = "MAC"
+      @sauce_platforms["unix"] = "UNIX"
+      @sauce_platforms["vista"] = "VISTA"
+      @sauce_platforms["windows"] = "WINDOWS"
+      @sauce_platforms["xp"] = "XP"
     end
 
     #
