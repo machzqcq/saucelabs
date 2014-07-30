@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.4"
   spec.authors       = ["Pradeep K. Macharla"]
   spec.email         = ["pradeep@seleniumframework.com"]
-  spec.summary       = %q{Access saucelabs using simple ruby.}
+  spec.summary       = %q{Access saucelabs, selenium grid or local browser instance using simple ruby.}
   spec.description   = %q{Access saucelabs by passing browser, version, platform and device information}
   spec.homepage      = "https://github.com/machzqcq/saucelabs"
   spec.license       = "MIT"
