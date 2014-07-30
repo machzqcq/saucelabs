@@ -1,7 +1,10 @@
 # SauceLabs
 
-saucelabs gem is written in simple ruby so as to be able to set the desired capabilities for selenium/watir grid execution
-and also be able to dynamically set the browser choice through an environment variable and execute the same scripts across browsers.
+saucelabs gem is written in simple ruby so as to be able to set the desired capabilities and browser options for selenium/watir grid execution
+and also be able to dynamically set the browser choice through an environment variable and execute the same scripts across browsers.The gem was
+initially written to help connect to saucelabs, however the current version support local execution, selenium grid execution and execution against
+Sauce Labs cloud environment. Please bear in mind that to execute against Sauce Labs cloud, you would require to register and get a username, password
+to access Sauce Labs on their [website] (http://www.saucelabs.com)
 Also platform and device parameters in the desired capabilities object when creating a connection to
 Sauce Labs. It can also be used to create a connection to local browser instance in addition to Sauce Labs
 The gem has been tested on MRI ruby and JRuby. Please report any issues and I will try my best to fix asap.  
@@ -14,7 +17,7 @@ If you are planning to use a Selenium GRID or connect to Sauce Labs, it is assum
 saucelabs gem is intended to be able to extract 4 main parameters viz. browser, version, platform and device
 that gets set in the desired capabilities object. The gem creation got inspired by the below blog post
 http://seleniumframework.wordpress.com/2014/05/18/pattern-for-running-multiple-cucumber-projects-on-ci-server/
-Though the gem name is saucelabs , it can be used to create browser instances locally and against any selenium grid. 
+Though the gem name is saucelabs , it can be used to create browser instances locally and against any selenium grid.
 
 ## Local Execution
 
