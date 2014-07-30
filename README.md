@@ -154,6 +154,19 @@ The following table is a mapping of all the platforms available on Sauce Labs we
 
 The platform values can also be obtained from https://saucelabs.com/platforms
 
+Additional platforms that are NOT on saucelabs however added to this gem to support selenium grid platforms
+
+| platform | description |
+| --- | --- |
+| xp | XP|
+| any | ANY |
+| mac | MAC |
+| unix | UNIX |
+| vista | VISTA |
+| windows | WINDOWS |
+
+
+
 The following table is a mapping of all the devices available on Sauce Labs website
 
 | device | description |
