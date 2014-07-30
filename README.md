@@ -83,13 +83,25 @@ ENV['BROWSER'] = "chrome"
 @browser.quit
 ````
 
-A simple ruby code example with watir and execues against saucelabs:
+A simple ruby code example with watir and executes against saucelabs:
 
 ````ruby
 require 'saucelabs'
 include SauceLabs
 
 @browser = SauceLabs.watir_browser(:'chrome35|windows8', {:url => 'http://username:password@ip:port/wd/hub'})
+@browser.goto "http://www.google.com"
+@browser.quit
+````
+
+A simple ruby code example with watir and executes against local selenium grid:
+It is assumed that you have started the grid as per the page [Grid 2] (http://code.google.com/p/selenium/wiki/Grid2)
+
+````ruby
+require 'saucelabs'
+include SauceLabs
+
+@browser = SauceLabs.watir_browser(:'chrome35|windows8', {:url => 'http://localhost:4444/wd/hub'})
 @browser.goto "http://www.google.com"
 @browser.quit
 ````
