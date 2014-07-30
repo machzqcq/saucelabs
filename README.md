@@ -15,6 +15,8 @@ saucelabs gem is intended to be able to extract 4 main parameters viz. browser, 
 that gets set in the desired capabilities object. The gem creation got inspired by the below blog post
 http://seleniumframework.wordpress.com/2014/05/18/pattern-for-running-multiple-cucumber-projects-on-ci-server/
 
+## Local Execution
+
 ````ruby
 require 'saucelabs'
 SauceLabs.watir_browser(browser = :firefox, browser_options = {})
@@ -30,12 +32,26 @@ SauceLabs.watir_browser(browser = :chrome, browser_options = {})
 SauceLabs.selenium_driver(browser = :chrome, browser_options = {})
 ````
 
+## Executing against local selenium grid
+It is assumed that you have started the grid as per the page [Grid 2] (http://code.google.com/p/selenium/wiki/Grid2)
+
 Another example of being able to use chrome 35 on Windows8 platform
+````ruby
+SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {:url => 'http://localhost:4444/wd/hub'})
+# or
+SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {:url => 'http://localhost:4444/wd/hub'})
+````
+
+## Executing against Sauce Labs
+
+Uses chrome 35 on Windows8 platform
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {:url => 'http://username:password@ip:port/wd/hub'})
 # or
 SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {:url => 'http://username:password@ip:port/wd/hub'})
 ````
+
+## More ways and parameters (using conf)
 
 Another example of being able to use chrome 35 on Windows8 platform (The :url can also be set using SauceLabs.conf, see below)
 ````ruby
