@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "saucelabs"
-  spec.version       = "0.3"
+  spec.version       = "0.4"
   spec.authors       = ["Pradeep K. Macharla"]
   spec.email         = ["pradeep@seleniumframework.com"]
   spec.summary       = %q{Access saucelabs using simple ruby.}
