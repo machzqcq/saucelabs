@@ -29,7 +29,8 @@ require 'saucelabs'
 SauceLabs.selenium_driver(browser = :firefox, browser_options = {})
 ````
 The methods use firefox as default browser and browser_options as optional parameter. You can specify other browsers
-by the following:
+by the following:  
+
 ````ruby
 SauceLabs.watir_browser(browser = :chrome, browser_options = {})
 # or
@@ -39,7 +40,8 @@ SauceLabs.selenium_driver(browser = :chrome, browser_options = {})
 ## Executing against local selenium grid
 It is assumed that you have started the grid as per the page [Grid 2] (http://code.google.com/p/selenium/wiki/Grid2)
 
-Another example of being able to use chrome 35 on Windows8 platform
+Another example of being able to use chrome 35 on Windows8 platform  
+
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {:url => 'http://localhost:4444/wd/hub'})
 # or
@@ -48,7 +50,8 @@ SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {:ur
 
 ## Executing against Sauce Labs
 
-Uses chrome 35 on Windows8 platform
+Uses chrome 35 on Windows8 platform  
+
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {:url => 'http://username:password@ip:port/wd/hub'})
 # or
@@ -57,7 +60,8 @@ SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {:ur
 
 ## More ways and parameters (using conf)
 
-Another example of being able to use chrome 35 on Windows8 platform (The :url can also be set using SauceLabs.conf, see below)
+Another example of being able to use chrome 35 on Windows8 platform (The :url can also be set using SauceLabs.conf, see below)  
+
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome35|windows8', browser_options = {})
 # or
@@ -65,14 +69,16 @@ SauceLabs.selenium_driver(browser = :'chrome35|windows8', browser_options = {})
 ````
 
 
-Yet Another example of being able to use chrome on mac platform and Android device (The :url needs to be set using SauceLabs.conf, see below)
+Yet Another example of being able to use chrome on mac platform and Android device (The :url needs to be set using SauceLabs.conf, see below)  
+
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome|linux|android', browser_options = {})
 # or
 SauceLabs.selenium_driver(browser = :'chrome|linux|android', browser_options = {})
 ````
 
-Yet Another example of being able to use safari on mac platform and iphone device (The :url needs to be set using SauceLabs.conf, see below)
+Yet Another example of being able to use safari on mac platform and iphone device (The :url needs to be set using SauceLabs.conf, see below)  
+
 ````ruby
 SauceLabs.watir_browser(browser = :'chrome|linux|iphone', browser_options = {})
 # or
