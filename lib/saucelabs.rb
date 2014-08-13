@@ -31,6 +31,11 @@ module SauceLabs
   def self.selenium_driver(browser = :firefox, browser_options={})
     factory.selenium_driver(browser,browser_options)
   end
+  
+  
+  def self.capybara_driver(browser = :firefox, browser_options={})
+    factory.capybara_driver(browser,browser_options)
+  end
 
   #
   # Yields to Factory object if parameters are set using conf
