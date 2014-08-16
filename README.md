@@ -171,9 +171,9 @@ chrome_android: BROWSER=chrome|linux|android --format pretty --color
 
 
 
-The first part determines the browser and its version
-The second part determines the platform value that is set in capabilities object
-The third part (used only for mobile device testing) determines the device
+The first part determines the browser and its version  
+The second part determines the platform value that is set in capabilities object  
+The third part (used only for mobile device testing) determines the device  
 
 
 
