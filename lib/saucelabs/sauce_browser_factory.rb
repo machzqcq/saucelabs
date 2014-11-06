@@ -43,14 +43,14 @@ module SauceLabs
     end
     
     
-    def capybara_driver(browser,browser_options)
-      Capybara.register_driver :selenium do |app|
-          Capybara::Selenium::Driver.new(app, :browser => browser)
-      end
-      Capybara.default_driver = :selenium
-      target,options = browser_caps(browser,browser_options)
-      create_selenium_driver(target,options)
-    end
+    #def capybara_driver(browser,browser_options)
+      #Capybara.register_driver :selenium do |app|
+          #Capybara::Selenium::Driver.new(app, :browser => browser)
+      #end
+      #Capybara.default_driver = :selenium
+      #target,options = browser_caps(browser,browser_options)
+      #create_selenium_driver(target,options)
+    #end
 
     private
 
